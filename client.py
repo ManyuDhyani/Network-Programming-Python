@@ -1,4 +1,5 @@
 import socket
+from unicodedata import name
 
 # s => server socket
 # c => client socket
@@ -11,6 +12,9 @@ c = socket.socket()
 c.connect(('localhost', 9999))
 # In connect we send write the server's ip address and the host
 # connect() and bind() function take a single argument, send ip add. and host number in a tuple.
+
+name = input("Enter your name: ")
+c.send(bytes(name, 'utf-8'))
 
 print(c.recv(1024).decode())
 
