@@ -11,11 +11,13 @@ server = smtplib.SMTP('smtp.gmail.com', 25)
     sending host to SMTP before you issue a MAIL FROM command. 
     Rule: Send the EHLO command once before a MAIL FROM command.
 """
-server.ehlo()
+
 
 with open('pswd.txt', 'r') as f:
     password = f.read()
 #server = smtplib.SMTP('smtp.example.com', 25)
+
+server.ehlo()
 server.connect("smtp.gmail.com", 587)
 server.ehlo()
 server.starttls()
