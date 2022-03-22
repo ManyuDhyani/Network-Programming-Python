@@ -1,14 +1,5 @@
-<<<<<<< HEAD
 import socket
 import threading
-=======
-from concurrent.futures import thread
-from email import message
-from http import client
-import socket
-import threading
-from tkinter.tix import Tree
->>>>>>> 15dafeefbfc2c11ca7128bfa1357c2023d4949b8
 
 nickname = input("Choose a nickname: ")
 
