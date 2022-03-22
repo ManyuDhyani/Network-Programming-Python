@@ -4,11 +4,8 @@ import socket
 import threading
 from queue import Queue
 
-<<<<<<< HEAD
 target = "Some URL or IP address"
 
-=======
->>>>>>> 46ab915da20858d0a038a8cbaaeef7c1743e7d79
 
 queue = Queue()
 open_ports = []
