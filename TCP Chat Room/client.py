@@ -1,9 +1,5 @@
-from concurrent.futures import thread
-from email import message
-from http import client
 import socket
 import threading
-from tkinter.tix import Tree
 
 nickname = input("Choose a nickname: ")
 
