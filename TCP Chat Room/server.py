@@ -35,7 +35,7 @@ def recieve():
         client, address = server.accept()
         print(f"Connected with {str(address)}")
 
-        client.send('NICKNAME: '.encode('ascii'))
+        client.send('NICKNAME'.encode('ascii'))
         nickname = client.recv(1024).decode('ascii')
         nicknames.append(nickname)
         clients.append(client)
@@ -47,4 +47,5 @@ def recieve():
         thread = threading.Thread(target=handle, args=(client,))
         thread.start()
 
+print("Server is Listening...")
 recieve()
